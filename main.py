@@ -29,22 +29,19 @@ def main():
         print("\n===== 个人记账小工具 =====")
         print("1. 录入收支")
         print("2. 查询筛选")
-        print("3. 查看统计")
-        print("4. 设置预算")
-        print("5. 导出报表")
-        print("6. 退出")
+        print("3. 设置预算")
+        print("4. 导出报表")
+        print("5. 退出")
         choice = input("请选择操作: ")
         if choice == "1":
             m2.add_record()
         elif choice == "2":
             statistics.main() 
         elif choice == "3":
-            statistics.main() 
-        elif choice == "4":
             m4.set_monthly_budget()       
-        elif choice == "5":
+        elif choice == "4":
             m4.export_records_detail()  
-        elif choice == "6":
+        elif choice == "5":
             break
         else:
             print("输入有误，请重试")
