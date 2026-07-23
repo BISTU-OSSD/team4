@@ -3,16 +3,10 @@ import os
 from datetime import datetime
 
 # ---------- 配置 ----------
-CSV_FILE = "bill.csv"                # 与成员3保持一致
+CSV_FILE = "data/ledger.csv"                # 与成员3保持一致
 HEADERS = ["日期", "类别", "收入", "支出", "备注"]   # 列名完全匹配成员3读取的字段
 # -------------------------
 
-def init_csv():
-    """如果 CSV 文件不存在，创建并写入表头"""
-    if not os.path.exists(CSV_FILE):
-        with open(CSV_FILE, 'w', newline='', encoding='utf-8-sig') as f:
-            writer = csv.writer(f)
-            writer.writerow(HEADERS)
 
 def add_record():
     """交互式添加一条收支记录"""
@@ -72,14 +66,3 @@ def add_record():
 
     print("✅ 记录添加成功！")
 
-def main():
-    init_csv()                     # 确保文件存在且含表头
-    while True:
-        add_record()
-        cont = input("是否继续添加？(y/n): ").strip().lower()
-        if cont != 'y':
-            break
-    print("程序结束。")
-
-if __name__ == "__main__":
-    main()

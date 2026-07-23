@@ -4,7 +4,7 @@ from datetime import datetime
 
 
 # ===================== 通用工具函数 =====================
-def read_records(file_path: str = "bill.csv") -> list:
+def read_records(file_path: str = "data/ledger.csv") -> list:
     """读取账单记录，适配 日期,类别,收入,支出,备注 格式，数值判断避免0.00误判"""
     records = []
     if not os.path.exists(file_path):
