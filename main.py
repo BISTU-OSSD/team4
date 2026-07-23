@@ -28,7 +28,7 @@ def main():
     while True:
         print("\n===== 个人记账小工具 =====")
         print("1. 录入收支")
-        print("2. 查询筛选")
+        print("2. 筛选汇总")
         print("3. 设置预算")
         print("4. 导出报表")
         print("5. 退出")
