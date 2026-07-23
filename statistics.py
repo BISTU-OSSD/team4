@@ -3,7 +3,7 @@ from datetime import datetime
 from typing import List, Dict, Optional, Tuple
 
 # ---------- 配置（与录入模块一致） ----------
-CSV_FILE = "bill.csv"
+CSV_FILE = "data/ledger.csv"
 HEADERS = ["日期", "类别", "收入", "支出", "备注"]
 PRESET_CATEGORIES = ["餐饮", "交通", "娱乐", "购物", "工资", "医疗", "教育", "其他"]
 # --------------------------------------------
@@ -188,5 +188,3 @@ def main():
 
     input("\n按回车键退出...")
 
-if __name__ == "__main__":
-    main()
